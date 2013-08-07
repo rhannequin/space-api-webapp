@@ -1,0 +1,13 @@
+{
+  "name": "Hello World",
+  "description": "Pretty interesting description",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "icon.png"
+  },
+  "developer": {
+    "name": "rhannequin",
+    "url": "http://rhannequin.com"
+  },
+  "default_locale": "en"
+}

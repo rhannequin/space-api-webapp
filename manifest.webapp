@@ -1,7 +1,7 @@
 {
   "name": "Hello World",
   "description": "Pretty interesting description",
-  "launch_path": "/index.html",
+  "launch_path": "/src/index.html",
   "icons": {
     "128": "icon.png"
   },

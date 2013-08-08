@@ -1,0 +1,20 @@
+{
+  "name": "ffos",
+  "version": "0.0.0",
+  "description": "ERROR: No README.md file found!",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "author": "rhannequin",
+  "license": "MIT",
+  "gitHead": "7b674e1d928ed745be56cb705f3b8c60a2c62f51",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "matchdep": "~0.1.2",
+    "grunt-open": "~0.2.1",
+    "grunt-contrib-connect": "~0.3.0",
+    "grunt-contrib-watch": "~0.5.1"
+  }
+}

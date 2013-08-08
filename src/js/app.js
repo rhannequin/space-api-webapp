@@ -6,12 +6,7 @@
     var _createCORSRequest = function (method, url) {
       var xhr = new XMLHttpRequest();
       if ("withCredentials" in xhr) {
-        // XHR for Chrome/Firefox/Opera/Safari.
         xhr.open(method, url, true);
-      } else if (typeof XDomainRequest !== 'undefined') {
-        // XDomainRequest for IE.
-        xhr = new XDomainRequest();
-        xhr.open(method, url);
       } else {
         // CORS not supported.
         xhr = null;
@@ -50,34 +45,34 @@
       xhr.send(data);
     };
 
-    this.ajax = function (url, opts) {
+    var obj = {};
+
+    obj.ajax = function (url, opts) {
       _makeCorsRequest(url, opts);
     };
 
-    return this;
+    return obj;
 
   }).call(this);
-
-
 
   var sunButton  = document.querySelector('.get-sun'),
       sunResults = document.querySelector('.sun-results');
   sunButton.addEventListener('click', function() {
-    Util.ajax('http://space-api.herokuapp.com/api/sun?pretty=false', {
+    Util.ajax('http://localhost:5000/api/sun?pretty=false', {
       method: 'GET',
-      success: function (response, xhr) {
+      success: function (response) {
         var data = JSON.parse(response).data;
         handleSunRequest(data);
       },
-      error: function (response, xhr) {
+      error: function (response) {
         console.error('XHR failed:', response);
       }
     });
   }, false);
 
 
-  var handleSunRequest = function (res) {
+  function handleSunRequest (res) {
     sunResults.innerHTML = 'Sun range: ' + res.range;
-  };
+  }
 
 }).call(this);

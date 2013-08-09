@@ -1,6 +1,6 @@
 {
-  "name": "Hello World",
-  "description": "Pretty interesting description",
+  "name": "Space API",
+  "description": "Sample application using space-api",
   "launch_path": "/src/index.html",
   "icons": {
     "128": "icon.png"
@@ -9,5 +9,12 @@
     "name": "rhannequin",
     "url": "http://rhannequin.com"
   },
-  "default_locale": "en"
+  "default_locale": "en",
+  "installs_allowed_from": ["*"],
+  "permissions": {
+    "systemXHR": {
+      "description": "Access to APIs"
+    }
+  },
+  "type": "privileged"
 }

@@ -1,0 +1,87 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+}
+
+section header {
+  padding-left: 1em;
+  background: none;
+  background-image: -webkit-linear-gradient( top,       rgba(45, 108, 174, .8), rgba(49, 49, 91, .9) 80% );
+  background-image:    -moz-linear-gradient( top,       rgba(45, 108, 174, .8), rgba(49, 49, 91, .9) 80% );
+  background-image:     -ms-linear-gradient( top,       rgba(45, 108, 174, .8), rgba(49, 49, 91, .9) 80% );
+  background-image:      -o-linear-gradient( top,       rgba(45, 108, 174, .8), rgba(49, 49, 91, .9) 80% );
+  background-image:         linear-gradient( to bottom, rgba(45, 108, 174, .8), rgba(49, 49, 91, .9) 80% );
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#E645456B,endColorstr=#E645456B);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#E645456B,endColorstr=#E645456B);
+  zoom:1;
+}
+
+section[role="region"] header {
+  padding-left: 3em;
+}
+
+section header:first-child > a {
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+}
+
+section header:first-child > a[role="button"] {
+  height: 33px;
+  width: 35px;
+  padding: 12px 6px;
+}
+
+section header h1 {
+  margin: 0;
+  padding: 10px 0;
+  color: #FFF;
+}
+
+section .content {
+  margin-left: 1em;
+}
+
+[data-position="right"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translateX(100%);
+     -moz-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+       -o-transform: translateX(100%);
+          transform: translateX(100%);
+  z-index: 15;
+  z-index: 100; /* -> drawer */
+}
+section[role="region"][data-position="right"] {
+  position: absolute;
+}
+[data-position="current"].left {
+    -webkit-animation: currentToLeft 0.4s forwards;
+       -moz-animation: currentToLeft 0.4s forwards;
+            animation: currentToLeft 0.4s forwards;
+  }
+[data-position="right"].current {
+  -webkit-animation: rightToCurrent 0.4s forwards;
+     -moz-animation: rightToCurrent 0.4s forwards;
+          animation: rightToCurrent 0.4s forwards;
+}
+[data-position="right"].right {
+  -webkit-animation: currentToRight 0.4s forwards;
+     -moz-animation: currentToRight 0.4s forwards;
+          animation: currentToRight 0.4s forwards;
+}
+[data-position="current"].current {
+  -webkit-animation: leftToCurrent 0.4s forwards;
+     -moz-animation: leftToCurrent 0.4s forwards;
+          animation: leftToCurrent 0.4s forwards;
+}

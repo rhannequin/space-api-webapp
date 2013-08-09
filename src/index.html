@@ -2,14 +2,45 @@
 <html>
   <head>
     <title>FFOS</title>
+
+    <link rel="stylesheet" href="css/default.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="icons/styles/action_icons.css">
+
+    <!-- Transitions -->
+    <link rel="stylesheet" href="css/transitions.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="css/fonts.css">
+
+    <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
-    <h1>Space API</h1>
-    <p>
-      Get Sun's data <button class="get-sun">Go!</button>
-    </p>
-    <div class="sun-results"></div>
+
+    <section id="index" data-position="current">
+      <header>
+        <h1>Space API</h1>
+      </header>
+      <article class="content">
+        <p>Get Sun's data <a id="btn-sun" class="btn" href="#">Go!</a></p>
+      </article>
+    </section>
+
+    <section role="region" id="sun" data-position="right">
+      <header>
+        <a id="btn-sun-back" href="#" role="button">
+          <i class="action-icon icon-back"></i>
+        </a>
+        <h1>Sun</h1>
+      </header>
+      <article class="content">
+        <p>Look, I 'm the Sun!</p>
+      </article>
+    </section>
+
     <!-- Load JavaScript -->
     <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+
   </body>
 </html>

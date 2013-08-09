@@ -12,8 +12,7 @@ module.exports = function (grunt) {
     connect: {
       server: {
         options: {
-          // port: '<%= config.server.port %>',
-          // base: '<%= config.paths.build._ %>/',
+          port: '8888',
           hostname: '', // Must be empty to be accessible everywhere and not only "localhost"
           keepalive: true
         }
@@ -22,7 +21,7 @@ module.exports = function (grunt) {
 
     open : {
       dev : {
-        path: 'http://localhost:8000/src'
+        path: 'http://localhost:8888/src'
       }
     }
 

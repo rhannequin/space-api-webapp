@@ -55,24 +55,15 @@
 
   }).call(this);
 
-  var sunButton  = document.querySelector('.get-sun'),
-      sunResults = document.querySelector('.sun-results');
-  sunButton.addEventListener('click', function() {
-    Util.ajax('http://localhost:5000/api/sun?pretty=false', {
-      method: 'GET',
-      success: function (response) {
-        var data = JSON.parse(response).data;
-        handleSunRequest(data);
-      },
-      error: function (response) {
-        console.error('XHR failed:', response);
-      }
-    });
-  }, false);
-
-
-  function handleSunRequest (res) {
-    sunResults.innerHTML = 'Sun range: ' + res.range;
-  }
+  document.querySelector('#btn-sun').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector('#sun').className = 'current';
+    document.querySelector('[data-position="current"]').className = 'left';
+  });
+  document.querySelector('#btn-sun-back').addEventListener ('click', function (e) {
+    e.preventDefault();
+    document.querySelector('#sun').className = 'right';
+    document.querySelector('[data-position="current"]').className = 'current';
+  });
 
 }).call(this);
